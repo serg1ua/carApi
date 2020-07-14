@@ -1,9 +1,9 @@
 # CAR API
 
 ## Environment
-**1. Create .env file in root directory**
+**1. Create .env, .env.production files in root directory**
 
-  1. NODE_ENV=[dev, prod]
+  1. NODE_ENV=[dev, test, production]
   2. DISCOUNT=20
   3. START_MONTH=12
   4. END_MONTH=18
@@ -17,7 +17,7 @@
 
 ## Development:
 
-Set NODE_ENV=dev
+NODE_ENV=dev
 
 Run:
 ```shell
@@ -29,24 +29,26 @@ Navigate to http://localhost:3000/api
 
 ## Production:
 
-Set MODE_ENV=prod
+NODE_ENV=production
 
 Run: 
 ```shell
 npm run cars
 ```
-Navigate to http://localhost:3000/api
-
 Stop:
 ```shell
 npm run cars:stop
 ```
+
 ## Tests:
-* To run unit tests, run:
+To run unit tests, run:
 ```shell
 npm run test
 ```
-* To run e2e tests:
+
+To run e2e tests:
+
+NODE_ENV=test
 
 ```shell
 npm i
